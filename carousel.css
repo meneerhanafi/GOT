@@ -16,8 +16,11 @@ body{
     display:grid;
     place-content: center;
     height:100vh;
-    background:linear-gradient(rgba(0, 0, 0, 0.347), rgba(40, 40, 40, 0.363)),
+    background:linear-gradient(rgba(0, 0, 0, 0.347), rgba(40, 40, 40, 0.681)),
     url('images/winterfell.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .scene {
