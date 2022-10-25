@@ -6,33 +6,26 @@
     box-sizing: border-box;
 }
 
+html, body{
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+
 body{
     display:grid;
     place-content: center;
-    height: 100vh;
-    overflow-y: hidden;
-   
-}
-
-body::before{
-    content:'';
-    position:absolute;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-    background:linear-gradient(rgba(0, 0, 0, 0.229), rgba(0, 0, 0, 0.794), rgba(0, 0, 0, 0)), 
+    height:100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.57), rgb(40,40,40,0.6)),
     url('images/winterfell.jpeg');
-    background-size:cover;
-    background-position: 50%, 50%;;
-    z-index:-1;
 }
 
 .scene {
     position: relative;
-    width: 320px;
     height: 470px;
+    width: 320px;
     perspective:500px;
+
   }
 
 .carousel{
@@ -42,6 +35,7 @@ body::before{
     transform-style: preserve-3d;
     transform: translateZ(-386px);
     transition: transform 1s;
+
 }
 
 .card-container{

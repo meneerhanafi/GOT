@@ -94,7 +94,7 @@ function getPositionX(event) {
 }
 
 function animation() {
-  setSliderPosition()
+  rotateCarousel()
   if (isDragging) requestAnimationFrame(animation)
 }
 
