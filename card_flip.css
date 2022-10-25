@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    display:grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.flip_container{
+    height:450px;
+    width:300px;
+    perspective:600px;
+}
+
+.card-container{
+    width:100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-container.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+
+/*FRONT CARD*/
+.side-container{
+    height:100%;
+    width:100%;
+    position:absolute;
+    backface-visibility: hidden;
+    border-radius:40px;
+    padding:0.5rem;
+}
+.front-content{
+    border-radius:40px;
+    display:grid;
+    height:100%;
+    align-items:flex-end;
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+                url('images/jonsnow1.png');
+    background-size:cover;
+    background-position: 60% 50%;
+    box-shadow: -20px 25px 24px 0px rgba(0, 0, 0, 0.5);
+}
+.alias{
+    font-family: 'Cinzel', serif;
+    font-size:12px;
+    color:#e3e3e3;
+    transform:  rotate(90deg);
+    text-align: center;
+    margin-right:-15rem;
+    text-shadow: 4px 2px 5px rgba(255,255,255,0.6);
+}
+
+.front-data{
+    padding:0 1rem;
+    border-radius:35px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    background-color: #E5E2BC;
+    color:rgba(35, 35, 35, 0.921);
+}
+.logo{
+    border-right:1px solid rgba(139, 139, 139, 0.334);
+    padding:1rem;
+    width:100px;
+}
+.data-right{
+    font-family: 'Cinzel', serif;
+}
+h1{
+    font-size:22px;
+    margin-bottom:-1rem;
+}
+h4{
+    font-weight: 400;
+    font-size:12px;
+}
+/*END OF FRONT CARD*/
+
+/*BACK CARD*/
+.back{
+    transform: rotateY(180deg);
+}
+.card-content_back{
+    border-radius:40px;
+    display:grid;
+    height:100%;
+    align-items:flex-end;
+    box-shadow: -20px 25px 24px 0px rgba(0, 0, 0, 0.5);
+    background-color: #E5E2BC;
+}
+
+.card-data_back{
+    padding:0 1rem;
+    border-radius:35px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    background-color: #E5E2BC;
+    color:rgba(35, 35, 35, 0.921);
+}
+/*END OF BACK CARD*/
+
+
+
+
+
+
+
+
+
+
+
+

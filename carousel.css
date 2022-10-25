@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    display:grid;
+    place-content: center;
+    height: 100vh;
+    overflow-y: hidden;
+   
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:linear-gradient(rgba(0, 0, 0, 0.229), rgba(0, 0, 0, 0.794), rgba(0, 0, 0, 0)), 
+    url('images/winterfell.jpeg');
+    background-size:cover;
+    background-position: 50%, 50%;;
+    z-index:-1;
+}
+
+.scene {
+    position: relative;
+    width: 320px;
+    height: 470px;
+    perspective:500px;
+  }
+
+.carousel{
+    width:100%;
+    height:100%;
+    position:absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-386px);
+    transition: transform 1s;
+}
+
+.card-container{
+    position:absolute;
+    height:450px;
+    width:300px;
+    border-radius:40px;
+    padding:0.5rem;
+    left:10px;
+    top:10px;
+}
+.card-alias{
+    font-family: 'Cinzel', serif;
+    font-size:12px;
+    color:#e3e3e3;
+    transform:  rotate(90deg);
+    text-align: center;
+    margin-right:-15rem;
+    text-shadow: 4px 2px 5px rgba(255,255,255,0.6);
+}
+.card-content{
+    border-radius:40px;
+    display:grid;
+    height:100%;
+    align-items:flex-end;
+    box-shadow: -20px 5px 45px 0px rgba(0, 0, 0, 0.443);
+}
+
+
+.ned{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/ned.jpeg');
+    background-position: 45% 50%;
+    background-size:cover;
+}
+
+.cat{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/cat.jpg');
+    background-position: 45% 50%;
+    background-size:cover;
+}
+
+.rob{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/rob.jpeg');
+    background-position: 45% 50%;
+    background-size:cover;
+}
+.jon{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/jonsnow1.png');
+    background-position: 60% 50%;
+    background-size:cover;
+}
+
+.sansa{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/sansa.jpeg');
+    background-position: 60% 50%;
+    background-size:cover;
+}
+
+.arya{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url(' images/arya.jpg');
+    background-position: 32.55% 50%;
+    background-size:cover;
+   
+}
+
+.bran{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/bran.jpeg');
+    background-position: 40% 50%;
+    background-size:cover;
+}
+
+.rickon{
+    background: linear-gradient(90deg, rgba(0, 0, 0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.669) 95%), 
+    url('images/rickon.jpeg');
+    background-position: 50% 50%;
+    background-size:cover; 
+}
+
+.card-data{
+    padding:0 1rem;
+    border-radius:35px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    background-color: #E5E2BC;
+    color:rgba(35, 35, 35, 0.921);
+}
+.card-logo{
+    border-right:1px solid rgba(139, 139, 139, 0.334);
+    padding:1rem;
+    width:70px;
+}
+.data-right{
+    font-family: 'Cinzel', serif;
+}
+h1{
+    font-size:20px;
+
+}
+h4{
+    font-weight: 400;
+    font-size:12px;
+}
+
+.card-container:nth-child(1){transform:rotateY(0deg) translateZ(386px)}
+.card-container:nth-child(2){transform:rotateY(45deg) translateZ(386px)}
+.card-container:nth-child(3){transform:rotateY(90deg) translateZ(386px)}
+.card-container:nth-child(4){transform:rotateY(135deg) translateZ(386px)}
+.card-container:nth-child(5){transform:rotateY(180deg) translateZ(386px)}
+.card-container:nth-child(6){transform:rotateY(225deg) translateZ(386px)}
+.card-container:nth-child(7){transform:rotateY(270deg) translateZ(386px)}
+.card-container:nth-child(8){transform:rotateY(315deg) translateZ(386px)}
+
+
+
+
+.btn-container{
+    display:none;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+

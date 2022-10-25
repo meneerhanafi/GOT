@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card_flip.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flip_container">
+        <div class="card-container">
+
+            <!--FRONT CARD-->
+            
+                <div class="side-container">
+                    <div class="front-content">
+                        <h2 class="alias">The Bastard of Winterfell</h2>
+                        <div class="front-data">
+                            <div class="data-left">
+                                <img class="logo" src="images/starklogo.png">
+                            </div>
+                            <div class="data-right">
+                                <h1>Jon Snow</h1>
+                                <h4>HOUSE STARK</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--END OF FRONT CARD-->
+            
+                <!--BACK CARD-->
+                <div class="side-container back">
+                    <div class="card-content_back">
+                        <img class="card-logo_back">
+                        
+                        <div class="card-data_back">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--END OF BACK CARD-->
+            
+                
+
+            </div>
+        </div>
+    </div>
+            
+
+
+    
+    
+
+<script>
+    const card = document.querySelector('.card-container');
+    card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+    });
+</script>
+</body>
+</html>
